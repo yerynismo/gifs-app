@@ -1,0 +1,18 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { Gif, Images } from '../../interfaces/gifs.interfaces';
+
+@Component({
+  selector: 'gifs-card',
+  templateUrl: './card.component.html',
+})
+export class CardComponent implements OnInit {
+  // @Input()
+  // public gifsInput: Gif[] = [];
+
+  @Input()
+  public gif!: Gif;;
+
+  ngOnInit(): void {
+   if(!this.gif) throw new Error('No Hay Nahhhh.');
+  }
+}
